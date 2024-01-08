@@ -9,34 +9,49 @@
 <body>
     <div class="wrapper">
         <div class="left-side">
-            <img src="images/leaves.jpg" class="leaves">
+            <div class="imgcontainer">
+                <img src="images/leaves.jpg" class="leaves">
+            </div>
             <div class="background">
                 <img src="images/odin-lined.png" class="thor">
                 <p class="Odin">ODIN</p>
             </div>
         </div>
-        <div class="right-side">
-            <p class="this">
-                This is not a real online service! You know you need something like this in your life to help 
-                you realize your deepest dreams. Sign up <em>now</em> to get started.
-                <br>
-                You <em>know</em> you want to.
-            </p>
-            <form>
-                <label for="first-name">FIRST NAME</label>
-                <input type="text" id="first-name" name="first-name">
-                <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" name="last-name">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
-                <label for="phone-number">Phone Number:</label>
-                <input type="tel" name="phone-number" id="phone-number">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password">
-                <label for="confirmation">Confirm password:</label>
-                <input type="password" name="confirmation" id="confirmation">
-                <button type="submit">Create Account</button>       
-            </form>
+        <div class="container">
+            <div class="right-side">
+                <p class="this">
+                    This is not a real online service! You know you need something like this in your life to help 
+                    you realize your deepest dreams. Sign up <em>now</em> to get started.
+                    <br>
+                    <br>
+                    You <em>know</em> you want to.
+                </p>
+                <div class="formContainer">
+                    <form> 
+                        <h3 class="do">Let's do this</h3>
+                        <div class="fields">
+                            <div class="left">
+                                    <label for="first-name">FIRST NAME</label>
+                                    <input type="text" id="first-name" name="first-name">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email">
+                                    <label for="password">Password:</label>
+                                    <input type="password" name="password" id="password">
+                            </div>
+                            <div class="right">
+                                <label for="last-name">Last name:</label>
+                                <input type="text" id="last-name" name="last-name">
+                                <label for="phone-number">Phone Number:</label>
+                                <input type="tel" name="phone-number" id="phone-number">
+                                <label for="confirmation">Confirm password:</label>
+                                <input type="password" name="confirmation" id="confirmation">
+                            </div>    
+                        </div>   
+                        <button type="submit">Create Account</button>
+
+                    </form>  
+                </div>    
+            </div>
         </div>
     </div>
 </body>
