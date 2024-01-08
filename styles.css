@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 /* reset end */
+@font-face{
+    font-family: Norse;
+    src: url(Norse-Bold.otf);
+}
 .wrapper{
     display: flex;
     gap: 5vh;
@@ -62,9 +66,19 @@ table {
     width: 40%;
 }
 .background{
-    width: 40%;
-    background-color: rgba(52, 52, 52, 0.6);
+    width: 42.5%;
+    background-color: rgba(52, 52, 52, 0.8);
     position: absolute;
-    top: 50px;
-    left: 18px;
+    top: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thor{
+    height: 10vh;
+}
+.Odin{
+    font-family: Norse, sans-serif;
+    font-size: 6rem;
+    color: white;
 }
