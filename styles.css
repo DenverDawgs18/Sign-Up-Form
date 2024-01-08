@@ -55,10 +55,12 @@ table {
     display: flex;
     gap: 5vh;
 }
-body{
-    background-image: url("images/leaves.jpg");
-    background-size: 40vh 100vh;
-    background-repeat: no-repeat;
+.leaves{
+    height: 100vh;
+    width: 40vh;
+    object-fit: cover;
+    flex-shrink: 1;
+    position: relative;
 }
 .left-side{
     width: 40%;
@@ -79,13 +81,4 @@ body{
     font-family: Norse, sans-serif;
     font-size: 6rem;
     color: white;
-}
-.image-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.this{
-    font-size: 24px;
-    font-weight: bold;
 }
