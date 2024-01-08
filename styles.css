@@ -1,0 +1,8 @@
+
+.wrapper{
+    display: flex;
+}
+.leaves{
+    width: 60vh;
+    height: 100vh;
+}
