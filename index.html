@@ -9,13 +9,11 @@
 <body>
     <div class="wrapper">
         <div class="left-side">
-            <div class="imgcontainer">
-                <img src="images/leaves.jpg" class="leaves">
-            </div>
             <div class="background">
                 <img src="images/odin-lined.png" class="thor">
                 <p class="Odin">ODIN</p>
             </div>
+            <p class="credit">Photo credits to <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
         </div>
         <div class="container">
             <div class="right-side">
@@ -28,31 +26,49 @@
                 </p>
                 <div class="formContainer">
                     <form> 
-                        <h3 class="do">Let's do this</h3>
+                        <h3 class="do">Let's do this!</h3>
                         <div class="fields">
                             <div class="left">
-                                    <label for="first-name">FIRST NAME</label>
-                                    <input type="text" id="first-name" name="first-name">
-                                    <label for="email">Email:</label>
-                                    <input type="email" name="email" id="email">
-                                    <label for="password">Password:</label>
-                                    <input type="password" name="password" id="password">
+                                    <label for="first-name">first name *</label>
+                                    <input type="text" id="first-name" name="first-name" required>
+                                    <label for="email">email *</label>
+                                    <input type="email" name="email" id="email" required>
+                                    <label for="password">password *</label>
+                                    <input type="password" name="password" id="password" required onkeyup="check()">
+                                    <p id="message">passwords match</p>
                             </div>
                             <div class="right">
-                                <label for="last-name">Last name:</label>
+                                <label for="last-name">last name</label>
                                 <input type="text" id="last-name" name="last-name">
-                                <label for="phone-number">Phone Number:</label>
+                                <label for="phone-number">phone number</label>
                                 <input type="tel" name="phone-number" id="phone-number">
-                                <label for="confirmation">Confirm password:</label>
-                                <input type="password" name="confirmation" id="confirmation">
-                            </div>    
+                                <label for="confirmation">confirm password *</label>
+                                <input type="password" name="confirmation" id="confirmation" required onkeyup="check()">
+                            </div> 
+                            
                         </div>   
-                        <button type="submit">Create Account</button>
+                        <button type="submit" class="create">Create Account</button>
+                        <p class="already">Already have an account? <span class="log">Log in</span></p>
 
                     </form>  
                 </div>    
             </div>
         </div>
     </div>
+    <script>
+        function check(){
+            const message = document.getElementById("message");
+            if(document.getElementById("password").value === document.getElementById('confirmation').value){
+                message.textContent = "passwords match";
+                message.style.color = "green";
+                document.querySelector(".create").disabled=true;
+            }
+            else{
+                message.textContent = "* passwords do not match";
+                message.style.color = "red";
+                document.querySelector(".create").disabled=true;
+            }
+        }
+    </script>
 </body>
 </html>
